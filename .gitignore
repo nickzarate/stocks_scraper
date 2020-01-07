@@ -1,0 +1,11 @@
+# Test information
+res.html
+
+# File containing database credentials
+creds.py
+
+# pyc files
+*.pyc
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
