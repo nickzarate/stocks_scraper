@@ -9,9 +9,9 @@ class MySQLPipeline(object):
     self.passwd = Creds.passwd
 
   def open_spider(self, spider):
-    print('setting database...')
+    print('setting up database...')
     self.db = connector.connect(host=self.host, user=self.user, passwd=self.passwd)
-    print('setting cursor...')
+    print('setting up cursor...')
     self.cursor = self.db.cursor()
     self.cursor.execute('USE investments')
 
@@ -23,7 +23,6 @@ class MySQLPipeline(object):
     self.db.close()
 
   def process_item(self, item, spider):
-    print('processing item...')
     sql = "INSERT INTO stocks (ticker, name, intraday_price, price_change, percent_change, volume, avg_vol_3_month, market_cap, pe_ratio_ttm, sector) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     val = (item['ticker'], item['name'], item['intraday_price'], item['price_change'], item['percent_change'], item['volume'], item['avg_vol_3_month'], item['market_cap'], item['pe_ratio_ttm'], item['sector'])
     self.cursor.execute(sql, val)

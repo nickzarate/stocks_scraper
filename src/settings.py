@@ -14,7 +14,6 @@ BOT_NAME = 'stocks_scraper'
 SPIDER_MODULES = ['src.spiders']
 NEWSPIDER_MODULE = 'src.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KTHML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
