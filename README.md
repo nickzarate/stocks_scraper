@@ -1,5 +1,7 @@
 # Stocks Scraper
 
+test
+
 This crawler uses Scrapy to crawl finance.yahoo.com, and collects information on stocks in various sectors including healthcare, technology, energy, and more. It collects information such as the ticker, name, price, change in price, etc. of stocks and stores them in a MySQL database on an automated schedule (just before the markets close for the day).
 
 ## Motivation
